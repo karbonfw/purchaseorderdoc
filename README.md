@@ -1,8 +1,8 @@
 # Purchase order doc
-Purpose: document business domain of purchase order
+Purpose: document business domain of purchase order. The content of this repo is published as https://karbonfw.github.io/purchaseorderdoc/.
 
 ## Links
-[domain.md](domain.md)
+* [Domain description](domain.md)
 
 ## How to
 ### Markdown
