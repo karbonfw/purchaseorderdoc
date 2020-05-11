@@ -6,4 +6,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu viverra velit,
 
 ![Dummy class diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/dummy-class-diagram.puml)
 
-See: https://plantuml.com/
+See: [https://plantuml.com/](https://plantuml.com/).
