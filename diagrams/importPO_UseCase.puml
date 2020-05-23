@@ -16,7 +16,7 @@ else (no)
     :Create new PO;
     :Create PO Users;
     :Import Order lines for existing Order;
-    :RaiseOrderPlacedEvent;
+    :Raise OrderPlacedEvent;
 endif
 
 
