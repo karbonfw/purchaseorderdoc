@@ -11,7 +11,7 @@ if (PO exists) then (yes)
     :Create new PO users;
     :Import Order Lines for new Order;
     :Calculate difference in attributes;
-    :Raise OrderUpdateEvent;
+    :Raise OrderUpdatedEvent;
 else (no)
     :Create new PO;
     :Create PO Users;
