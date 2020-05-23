@@ -1,0 +1,23 @@
+@startuml
+:Hessage with PO data received";
+
+:Validate Data;
+
+:Find PO by Key;
+
+if (PO exists) then (yes)
+    :Merge existing PO with imported PO;
+    :Update PO;
+    :Create new PO users;
+    :Import Order Lines for new Order;
+    :Calculate difference in attributes;
+    :Raise OrderUpdateEvent;
+else (no)
+    :Create new PO;
+    :Create PO Users;
+    :Import Order lines for existing Order;
+    :RaiseOrderPlacedEvent;
+endif
+
+
+@enduml

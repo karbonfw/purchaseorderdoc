@@ -1,0 +1,14 @@
+@startuml
+(Import PurchaseOrder) as ImportPO
+
+(AllocatePurchaseOrderLineToBooking) as AllocatePOL
+
+:Customer ERP System: as erp
+
+:Action in another Service: as anotherService
+
+
+erp --> ImportPO : async. message with PO data
+
+anotherService --> AllocatePOL : async. message with allocation information
+@enduml
