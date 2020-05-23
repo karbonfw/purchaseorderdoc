@@ -1,0 +1,15 @@
+@startuml
+
+class PurchaseOrder {
+
+    {method} assignSupplier(SupplierCode)
+}
+
+class PurchaseOrderLine {
+
+    {method} cancel()
+    {method} isCancelled()
+    {method} activate()
+    {method} allocateQuantityToBooking(BookingNumber,Quantity)
+}
+@enduml
