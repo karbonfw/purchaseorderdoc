@@ -1,5 +1,6 @@
 @startuml
-(Import PurchaseOrder) as ImportPO
+(Create New PurchaseOrder) as ImportPO
+(Update Existing PurchaseOrder) as ImportExistingPO
 
 (AllocatePurchaseOrderLineToBooking) as AllocatePOL
 
@@ -8,7 +9,8 @@
 :Action in another Service: as anotherService
 
 
-erp --> ImportPO : async. message with PO data
+erp --> ImportPO : import with PO data
+erp --> ImportExistingPO : import with PO data
 
 anotherService --> AllocatePOL : async. message with allocation information
 @enduml
