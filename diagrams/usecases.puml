@@ -1,4 +1,18 @@
 @startuml
+skinparam handwritten true
+skinparam usecase {
+BackgroundColor Cyan
+BorderColor DarkSlateGray
+
+BackgroundColor<< Main >> YellowGreen
+BorderColor<< Main >> YellowGreen
+
+ArrowColor Pink
+ActorBorderColor black
+ActorFontName Courier
+
+ActorBackgroundColor<< Human >> Gold
+}
 (Create New PurchaseOrder) as ImportPO
 (Update Existing PurchaseOrder) as ImportExistingPO
 
