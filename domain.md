@@ -50,6 +50,9 @@
 
 ![Import PO UseCase](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/importPO_UseCase.puml)
 
+Separated flow prototype:
+
+![Import PO UseCase Sequence](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/importPO_separated_sequence.puml)
 ### Allocate Purchase OrderLine to Booking
 **Use case name:** *Allocate Purchase OrderLine to Booking*  
 **Use case description:** *If line is allocated to the Booking the message with such information comes. It includes deallocation as well*
