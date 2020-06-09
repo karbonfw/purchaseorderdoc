@@ -11,7 +11,7 @@ end box
 box "core/Domain"
   participant Validator
   participant BusinessDocParser
-  participant POFactory
+  participant PORepository
   participant PurchaseOrder
 end box
 
@@ -24,6 +24,13 @@ BatchImporter -> BusinessDocParser: parseLine
 BatchImporter -> Validator: validateLine
 BatchImporter -> JPA_POL_Repository: insertOrUpdate
 BatchImporter -\ ImportPO: purchaseOrderImported
-ImportPO -> POFactory: loadPOAggregate
-POFactory -> PurchaseOrder ** : load
+ImportPO -> PORepository: loadPOAggregate
+PORepository -> PurchaseOrder ** : load
+PurchaseOrder --> ImportPO
+ImportPO -> Validator: validateAggregate
+Validator -> PurchaseOrder
+PurchaseOrder --> Validator
+Validator --> ImportPO
+ImportPO -> PurchaseOrder: markAsValid
+ImportPO -> PORepository: storePurchaseOrder
 @enduml
