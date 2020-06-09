@@ -3,6 +3,7 @@ Purpose: document business domain of purchase order. The content of this repo is
 
 ## Links
 * [Domain description](domain.md)
+* [Import schemes](import.md)
 
 ## How to
 ### Markdown
