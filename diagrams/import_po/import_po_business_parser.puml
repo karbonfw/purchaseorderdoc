@@ -1,0 +1,29 @@
+@startuml
+box "app"
+  participant ImportEndPoint
+  participant BatchImporter
+  participant JPA_PO_Repository
+  participant JPA_POL_Repository
+end box
+box "core/UseCase"
+  participant ImportPO
+end box
+box "core/Domain"
+  participant Validator
+  participant BusinessDocParser
+  participant POFactory
+  participant PurchaseOrder
+end box
+
+ImportEndPoint -\ BatchImporter: import
+BatchImporter --\ ImportEndPoint: importEnqueued
+BatchImporter -> BusinessDocParser: parseHeader
+BatchImporter -> Validator: validateHeader
+BatchImporter -> JPA_PO_Repository: insertOrUpdate
+BatchImporter -> BusinessDocParser: parseLine
+BatchImporter -> Validator: validateLine
+BatchImporter -> JPA_POL_Repository: insertOrUpdate
+BatchImporter -\ ImportPO: purchaseOrderImported
+ImportPO -> POFactory: loadPOAggregate
+POFactory -> PurchaseOrder ** : load
+@enduml
