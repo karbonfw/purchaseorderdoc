@@ -1,14 +1,16 @@
 @startuml
+skinparam ParticipantPadding 10
+skinparam BoxPadding 20
 box "app"
   participant ImportEndPoint
   participant BatchImporter
   participant JPA_PO_Repository
   participant JPA_POL_Repository
 end box
-box "core/UseCase"
+box "core/UseCase" #LightBlue
   participant ImportPO
 end box
-box "core/Domain"
+box "core/Domain" #Orange
   participant Validator
   participant BusinessDocParser
   participant PORepository

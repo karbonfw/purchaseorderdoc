@@ -1,0 +1,18 @@
+Use case name: Allocate Purchase OrderLine to Booking
+Use case description: If line is allocated to the Booking the message with such information comes. It includes deallocation as well
+
+Actors: Supplier
+
+
+Precondition: Order Line must exists
+
+Postcondition: none
+
+
+Main scenario:
+	1. User chooses Purchase Order Lines to newly created booking and allocates quantity.
+	2. System calculates outstanding quantity.
+
+
+Alternative scenario:
+	1. Purchase order is already cancelled -> Message with uncompleted information should be published.
