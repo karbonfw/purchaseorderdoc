@@ -22,3 +22,9 @@ We use `Validator` to perform basic validation on imported data structures.
 We can save some by giving up with business parser. Instead, we parse business document locally in the `app` tier. With this approach we can use JPA datamodel directly when parsing.
 
 ![Import PO UseCase Sequence](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/import_po/import_po_local_parser.puml)
+
+## Import using CQRS
+
+We can avoid loading up a whole aggregate and then manipulate and store it again by using command pattern and CQRS.
+
+![Import PO UseCase Sequence](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/import_po/import_po_cqrs.puml)
