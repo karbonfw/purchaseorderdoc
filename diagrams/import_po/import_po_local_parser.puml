@@ -20,10 +20,8 @@ end box
 ImportEndPoint -\ BatchImporter: import
 BatchImporter --\ ImportEndPoint: importEnqueued
 BatchImporter -> DocParser: parseHeader
-BatchImporter -> Validator: validateHeader
 BatchImporter -> JPA_PO_Repository: insertOrUpdate
 BatchImporter -> DocParser: parseLine
-BatchImporter -> Validator: validateLine
 BatchImporter -> JPA_POL_Repository: insertOrUpdate
 BatchImporter -\ ImportPO: purchaseOrderImported
 ImportPO -> PORepository: loadPOAggregate
