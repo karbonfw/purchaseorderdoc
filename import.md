@@ -4,7 +4,7 @@
 
 In this scenario we parse a formal business document describing purchase order. The `BusinessDocParser` therefore belongs to the domain.
 
-In this scenario we want to handle purchase orders of infinite (unlimited) size. Imported data structures are big and complex. Here we present a technique of direct access to the store without core tier mediation. 
+In this scenario we want to handle purchase orders of infinite (unlimited) size. Imported data structures are big and complex. Here we present a technique of direct access to the store without core tier mediation.
 
 We use `Validator` to perform basic validation on imported data structures.
     
