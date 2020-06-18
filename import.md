@@ -29,9 +29,3 @@ Import process can be further simplified and speed upm by using plain JDBC calls
 
 ![Import PO UseCase Sequence](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/import_po/import_po_local_parser_jdbc.puml)
 
-
-## Import using CQRS (backup)
-
-We can avoid loading up a whole aggregate and then manipulate and store it again by using command pattern and CQRS.
-
-![Import PO UseCase Sequence](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/karbonfw/purchaseorderdoc/master/diagrams/import_po/import_po_cqrs.puml)
